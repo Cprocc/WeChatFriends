@@ -30,9 +30,7 @@ def get_pie(item_name,item_name_list,item_num_list):
     pie.render(out_file_name)
 
 def get_bar(item_name,item_name_list,item_num_list):
-    subtitle = "微信公众号：大数据前沿"
-    bar = Bar(item_name,page_title = item_name,title_text_size=30,title_pos='center',\
-        subtitle = subtitle,subtitle_text_size = 25)
+    bar = Bar(item_name,page_title = item_name,title_text_size=30,title_pos='center')
     
     bar.add("", item_name_list, item_num_list,title_pos='center', xaxis_interval=0,xaxis_rotate=27,\
         xaxis_label_textsize = 20,yaxis_label_textsize = 20,yaxis_name_pos='end',yaxis_pos = "%50")
@@ -195,8 +193,8 @@ if __name__ == '__main__':
     name_list,num_list = dict2list(sex_counter)
     get_pie('性别统计',name_list,num_list)
 
-    #省份前15
-    name_list,num_list = counter2list(Province_counter.most_common(15))
+    #所有省份
+    name_list,num_list = counter2list(Province_counter.most_common(34))
     get_bar('地区统计',name_list,num_list)
 
     #地图
