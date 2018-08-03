@@ -1,7 +1,7 @@
 #coding=utf-8
 
 import json
-import re
+import re   #正则
 from pyecharts import Bar
 from pyecharts import Grid
 from pyecharts import WordCloud
